@@ -8,13 +8,13 @@ from function import returnSearchResultIndexes
 
 # define model info 
 model_name = 'all-MiniLM-L6-v2'
-model_path = "app/data/" + model_name
+model_path = "data/" + model_name
 
 # load model
 model = SentenceTransformer(model_path)
 
 # load video index
-df = pl.scan_parquet('app/data/video-index.parquet')
+df = pl.scan_parquet('data/video-index.parquet')
 
 # create distance metric object
 dist_name = 'manhattan'
